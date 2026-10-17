@@ -2,18 +2,25 @@
 __pycache__/
 *.py[cod]
 *.egg-info/
+
+# Testing and type checking
 .pytest_cache/
 .mypy_cache/
+.coverage
+.coverage.*
+htmlcov/
 
 # Virtual environments
 .venv/
 venv/
 env/
 
-# Local configuration
+# Local configuration and secrets
 .env
+.env.*
+!.env.example
 
-# Local database
+# Local databases
 *.db
 *.sqlite
 *.sqlite3
@@ -24,13 +31,6 @@ env/
 .DS_Store
 Thumbs.db
 
-# Coverage
-.coverage
-htmlcov/
-
-
-# Test and build artifacts
-.coverage
-htmlcov/
+# Build artifacts
 dist/
 build/

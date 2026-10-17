@@ -23,3 +23,12 @@ class StudentResponse(StudentBase):
     id: int
 
     model_config = ConfigDict(from_attributes=True)
+
+
+class AIQuestion(BaseModel):
+    question: str = Field(min_length=1, max_length=500)
+
+
+class AIAnswer(BaseModel):
+    question: str
+    answer: str
